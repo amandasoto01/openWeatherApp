@@ -1,0 +1,49 @@
+{
+  "coord": {
+    "lon": -76.0814,
+    "lat": 4.6117
+  },
+  "weather": [
+    {
+      "id": 500,
+      "main": "Rain",
+      "description": "light rain",
+      "icon": "10d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 28.6,
+    "feels_like": 30.65,
+    "temp_min": 26.38,
+    "temp_max": 28.6,
+    "pressure": 1008,
+    "humidity": 62,
+    "sea_level": 1008,
+    "grnd_level": 906
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1.56,
+    "deg": 276,
+    "gust": 1.3
+  },
+  "rain": {
+    //"1h": 0.2
+  },
+  "clouds": {
+    "all": 35
+  },
+  "dt": 1692991821,
+  "sys": {
+    "type": 1,
+    "id": 8561,
+    "country": "CO",
+    "sunrise": 1692961187,
+    "sunset": 1693005217
+  },
+  "timezone": -18000,
+  "id": 3666881,
+  "name": "Toro",
+  "cod": 200
+}

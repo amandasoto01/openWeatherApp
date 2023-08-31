@@ -1,0 +1,27 @@
+// const [weather, setWeather] = useState<WeatherData>();
+
+// const searchPressed = async () => {
+//   console.log("Search pressed");
+//   console.log(search);
+//   console.log(
+//     `${process.env.REACT_APP_API_URL} and key: ${process.env.REACT_APP_API_KEY}`
+//   );
+
+//   const response = await WeatherFacade.findByName(search);
+
+//   fetch(
+//     `${process.env.REACT_APP_API_URL}weather?q=${search}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+//   )
+//     .then((res) => res.json())
+//     .then((result) => {
+//       console.log(result);
+//       setName(result.name);
+//       setTemp(result.main.temp);
+//       setMain(result.weather[0].main);
+//       setDescription(result.weather[0].description);
+//     });
+//   // .catch((error) => {
+//   //   console.error("Error fetching the weather: ", error);
+//   //   setWeather(null);
+//   // });
+// };
