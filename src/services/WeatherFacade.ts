@@ -2,18 +2,26 @@ import { WeatherData } from "../WeatherData";
 
 export default class WeatherFacade {
   static async findByName(name: string) {
-    let response = await fetch(
-      `${process.env.REACT_APP_API_URL}weather?q=${name}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
-    );
-    let json = await response.json();
-    return json;
+    try {
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}weather?q=${name}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+      );
+
+      if (!response.ok) {
+        throw new Error(`The request has failed for city ${name}`);
+      }
+      const json = await response.json();
+      return json;
+    } catch (error) {
+      console.warn("Error in city...");
+    }
   }
 
   static async getForecast(lat: number, lon: number) {
-    let response = await fetch(
+    const response = await fetch(
       `${process.env.REACT_APP_API_URL}onecall?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
     );
-    let json = await response.json();
+    const json = await response.json();
     return json;
   }
 

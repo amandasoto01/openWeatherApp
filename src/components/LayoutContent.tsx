@@ -5,12 +5,14 @@ import AirCondition from "./AirCondition";
 import WeatherFacade from "../services/WeatherFacade";
 import WeekForecast from "./WeekForecast";
 
-export default function LayoutContent() {
+export default function LayoutContent(this: any) {
   const [search, setSearch] = useState("");
   const [cityCurrent, setCityCurrent] = useState({});
   const [cityForecast, setCityForecast] = useState({});
   const [airConditions, setAirConditions] = useState({});
   const [weekForecast, setWeekForecast] = useState({});
+  const [isHide, setIsHide] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const findInitialCity = async () => {
@@ -33,7 +35,13 @@ export default function LayoutContent() {
       const cityName = search !== "" ? search : "bogota";
       if (event.key === "Enter" && event.target.value !== "") {
         const result = await WeatherFacade.findByName(cityName);
-        setCityCurrent(result);
+
+        if (!result) {
+          setIsHide(true);
+          setErrorMessage(`City ${search} not found`);
+        } else {
+          setIsHide(false);
+        }
 
         if (result?.main) {
           setCityCurrent(result);
@@ -45,7 +53,6 @@ export default function LayoutContent() {
           const forecast = await WeatherFacade.getForecast(lat, lon);
           setCityForecast(forecast);
           setAirConditions(forecast.current);
-          console.log("daily ", forecast.daily);
           setWeekForecast(forecast.daily);
         }
       }
@@ -58,6 +65,7 @@ export default function LayoutContent() {
       <header>
         <h1>Weather App</h1>
       </header>
+
       <div>
         <input
           type="text"
@@ -66,10 +74,17 @@ export default function LayoutContent() {
           onKeyUp={(e) => onKeyUpValueHandler(e)}
         />
       </div>
-      <City city={cityCurrent}></City>
-      <TodayForecast city={cityForecast}></TodayForecast>
-      <AirCondition city={airConditions}></AirCondition>
-      <WeekForecast city={weekForecast}></WeekForecast>
+
+      {!isHide && (
+        <>
+          <City city={cityCurrent}></City>
+          <TodayForecast city={cityForecast}></TodayForecast>
+          <AirCondition city={airConditions}></AirCondition>
+          <WeekForecast city={weekForecast}></WeekForecast>
+        </>
+      )}
+
+      {isHide && <p>{errorMessage}</p>}
     </div>
   );
 }

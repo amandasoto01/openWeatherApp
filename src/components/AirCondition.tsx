@@ -11,7 +11,11 @@ export default function AirCondition(props: any) {
       <button>See more</button>
       <div>
         <div>
-          <img src={thermometer} alt="thermometer for real feel"></img>
+          <img
+            className="icon"
+            src={thermometer}
+            alt="thermometer for real feel"
+          ></img>
           <p>Real Feel</p>
         </div>
         <p>{Math.ceil(props.city.feels_like)}&deg;C</p>
@@ -19,7 +23,7 @@ export default function AirCondition(props: any) {
 
       <div>
         <div>
-          <img src={wind} alt="wind"></img>
+          <img className="icon" src={wind} alt="wind"></img>
           <p>wind</p>
         </div>
         <p>{props.city.wind_speed} Km/h</p>
@@ -27,7 +31,11 @@ export default function AirCondition(props: any) {
 
       <div>
         <div>
-          <img src={drop} alt="drop of water - chance of rain"></img>
+          <img
+            className="icon"
+            src={drop}
+            alt="drop of water - chance of rain"
+          ></img>
           <p>Chance of Rain</p>
         </div>
         <p>{props.city.humidity}%</p>
@@ -35,7 +43,7 @@ export default function AirCondition(props: any) {
 
       <div>
         <div>
-          <img src={sun} alt="sun for UV index"></img>
+          <img className="icon" src={sun} alt="sun for UV index"></img>
           <p>UV Index</p>
         </div>
         <p>{props.city.uvi}</p>

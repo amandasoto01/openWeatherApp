@@ -32,7 +32,8 @@ export default function TodayForecast(props: any) {
   const [data, setData] = useState<NewHourlyData[]>([]);
 
   useEffect(() => {
-    if (props.city != undefined && props.city.hourly != undefined) {
+    //props.city !== undefined && props.city.hourly !== undefined
+    if (props.city?.hourly) {
       const dailyForecast = getDailyForecast(props.city);
       if (dailyForecast) {
         setData(dailyForecast);
