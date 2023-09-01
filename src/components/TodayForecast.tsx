@@ -1,10 +1,4 @@
-import { useState, useEffect } from "react";
-
-interface NewHourlyData {
-  date: string;
-  temp: number;
-  weather: { main: any; icon: any };
-}
+import { NewHourlyData } from "./interfaces/HourlyDataInterface";
 
 function getDailyForecast(result: any) {
   const hourly = result.hourly;
@@ -29,17 +23,11 @@ function getDailyForecast(result: any) {
 }
 
 export default function TodayForecast(props: any) {
-  const [data, setData] = useState<NewHourlyData[]>([]);
+  let data: NewHourlyData[] = [];
 
-  useEffect(() => {
-    //props.city !== undefined && props.city.hourly !== undefined
-    if (props.city?.hourly) {
-      const dailyForecast = getDailyForecast(props.city);
-      if (dailyForecast) {
-        setData(dailyForecast);
-      }
-    }
-  }, [props.city]);
+  if (props.city?.hourly) {
+    data = getDailyForecast(props.city);
+  }
 
   return (
     <div>

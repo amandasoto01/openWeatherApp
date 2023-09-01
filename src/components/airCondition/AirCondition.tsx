@@ -1,8 +1,8 @@
 import "./AirCondition.css";
-import thermometer from "../images/thermometer.png";
-import wind from "../images/wind.png";
-import drop from "../images/drop.png";
-import sun from "../images/sun.png";
+import thermometer from "../../images/thermometer.png";
+import wind from "../../images/wind.png";
+import drop from "../../images/drop.png";
+import sun from "../../images/sun.png";
 
 export default function AirCondition(props: any) {
   return (

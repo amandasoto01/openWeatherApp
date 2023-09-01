@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import City from "./City";
 import TodayForecast from "./TodayForecast";
-import AirCondition from "./AirCondition";
+import AirCondition from "./airCondition/AirCondition";
 import WeatherFacade from "../services/WeatherFacade";
 import WeekForecast from "./WeekForecast";
+import Sidebar from "./sidebar/Sidebar";
 
 export default function LayoutContent(this: any) {
   const [search, setSearch] = useState("");
@@ -85,6 +86,8 @@ export default function LayoutContent(this: any) {
       )}
 
       {isHide && <p>{errorMessage}</p>}
+
+      <Sidebar></Sidebar>
     </div>
   );
 }
