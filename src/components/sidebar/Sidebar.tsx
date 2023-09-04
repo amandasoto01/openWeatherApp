@@ -7,26 +7,43 @@ import settings from "../../images/sidebar/settings.png";
 
 export default function Sidebar() {
   return (
-    <div>
+    // col-start-0 row-span-3
+    <div className="bg-gray-100 mb-4 rounded-md">
       <h1>Sidebar</h1>
-      <div>
-        <img className="sidebarImg" src={umbrella} alt={umbrella}></img>
-      </div>
-      <div>
-        <img className="sidebarImg" src={weather} alt="weather image"></img>
-        <p>Weather</p>
-      </div>
-      <div>
-        <img className="sidebarImg" src={cities} alt="weather image"></img>
-        <p>Cities</p>
-      </div>
-      <div>
-        <img className="sidebarImg" src={map} alt="weather image"></img>
-        <p>Map</p>
-      </div>
-      <div>
-        <img className="sidebarImg" src={settings} alt="weather image"></img>
-        <p>Settings</p>
+      <div className="flex flex-col justify-center items-center gap-4 mt-4">
+        <div className="self-center">
+          <button type="button">
+            <img className="sidebarImg" src={umbrella} alt={umbrella}></img>
+          </button>
+        </div>
+        <div className="self-center">
+          <button>
+            <img className="sidebarImg" src={weather} alt="weather image"></img>
+            <p>Weather</p>
+          </button>
+        </div>
+        <div className="self-center">
+          <button>
+            <img className="sidebarImg" src={cities} alt="weather image"></img>
+            <p>Cities</p>
+          </button>
+        </div>
+        <div className="self-center">
+          <button>
+            <img className="sidebarImg" src={map} alt="weather image"></img>
+            <p>Map</p>
+          </button>
+        </div>
+        <div className="self-center">
+          <button>
+            <img
+              className="sidebarImg"
+              src={settings}
+              alt="weather image"
+            ></img>
+            <p>Settings</p>
+          </button>
+        </div>
       </div>
     </div>
   );

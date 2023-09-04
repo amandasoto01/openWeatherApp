@@ -6,47 +6,51 @@ import sun from "../../images/sun.png";
 
 export default function AirCondition(props: any) {
   return (
-    <div>
-      <h1>Air Conditions</h1>
-      <button>See more</button>
-      <div>
-        <div>
+    <div className="bg-gray-100 grid grid-cols-2 grid-rows-3 gap-y-3 justify-items-center mb-4 rounded-md">
+      <p className="flex text-gray-400 font-bold">Air Conditions</p>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full px-2 py-1">
+        See more
+      </button>
+      <div className="">
+        <div className="flex gap-2">
           <img
             className="icon"
             src={thermometer}
             alt="thermometer for real feel"
           ></img>
-          <p>Real Feel</p>
+          <p className="text-gray-400">Real Feel</p>
         </div>
-        <p>{Math.ceil(props.city.feels_like)}&deg;C</p>
+        <p className="text-3xl font-bold">
+          {Math.ceil(props.city.feels_like)}&deg;C
+        </p>
       </div>
 
       <div>
-        <div>
+        <div className="flex gap-2">
           <img className="icon" src={wind} alt="wind"></img>
-          <p>wind</p>
+          <p className="text-gray-400">wind</p>
         </div>
-        <p>{props.city.wind_speed} Km/h</p>
+        <p className="text-3xl font-bold">{props.city.wind_speed} Km/h</p>
       </div>
 
       <div>
-        <div>
+        <div className="flex gap-2">
           <img
             className="icon"
             src={drop}
             alt="drop of water - chance of rain"
           ></img>
-          <p>Chance of Rain</p>
+          <p className="text-gray-400">Chance of Rain</p>
         </div>
-        <p>{props.city.humidity}%</p>
+        <p className="text-3xl font-bold">{props.city.humidity}%</p>
       </div>
 
       <div>
-        <div>
+        <div className="flex gap-2">
           <img className="icon" src={sun} alt="sun for UV index"></img>
-          <p>UV Index</p>
+          <p className="text-gray-400">UV Index</p>
         </div>
-        <p>{props.city.uvi}</p>
+        <p className="text-3xl font-bold">{props.city.uvi}</p>
       </div>
     </div>
   );

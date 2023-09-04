@@ -1,3 +1,5 @@
+import "./WeekForecast.css";
+
 export default function WeekForecast(props: any) {
   const daysOfWeek = [
     "Sunday",
@@ -10,7 +12,7 @@ export default function WeekForecast(props: any) {
   ];
 
   let weekForecast = [];
-  if (props.city && props.city.length != 0) {
+  if (props.city && props.city.length !== 0) {
     console.log("length ", props.city);
     for (let i = 0; i < 7; i++) {
       if (props.city[i]) {
@@ -29,22 +31,22 @@ export default function WeekForecast(props: any) {
   console.log("days: ", weekForecast);
 
   return (
-    <div>
+    <div className="bg-gray-100 mb-4 rounded-md">
       <h1>7-DAY FORECAST</h1>
-      <div>
-        {/* dia, imagen, sunny, 36/22 */}
-        <div>
-          {weekForecast.map((item: any, index: number) => (
-            <div key={index}>
-              <p>{item.day}</p>
-              <img src={item.image} alt="Weather Icon" />
-              <p>{item.main}</p>
-              <p>
-                {item.max}/{item.min}
-              </p>
-            </div>
-          ))}
-        </div>
+
+      {/* dia, imagen, sunny, 36/22 */}
+      <div className="flex flex-col justify-center items-center gap-4">
+        {weekForecast.map((item: any, index: number) => (
+          <div className="flex gap-5" key={index}>
+            <p className="text-gray-400">{item.day.substring(0, 3)}</p>
+            <img src={item.image} alt="Weather Icon" />
+            <p>{item.main}</p>
+            <p className="">
+              {item.max}
+              <span className="text-gray-400">/{item.min}</span>
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
