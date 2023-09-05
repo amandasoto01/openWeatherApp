@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import City from "./city/City";
-import TodayForecast from "./TodayForecast";
+import TodayForecast from "./todayForecast/TodayForecast";
 import AirCondition from "./airCondition/AirCondition";
 import { findByName, getForecast } from "../services/WeatherFacade";
 import WeekForecast from "./weekForecast/WeekForecast";
@@ -59,10 +59,10 @@ export default function LayoutContent(this: any) {
   }, [search]);
 
   return (
-    <div className="m-5">
+    <div className="m-5 ">
       {/* grid grid-cols-4 grid-rows-4 */}
-      <div className="">
-        <div className="mb-4">
+      <div className="grid grid-cols-4 grid-rows-3 justify-stretch">
+        <div className="mb-4 col-start-2 col-span-2">
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
@@ -70,11 +70,16 @@ export default function LayoutContent(this: any) {
             onChange={(e) => setSearch(e.target.value)}
             // onKeyUp={(e) => onKeyUpValueHandler(e)}
           />
+          {!isHide && (
+            <>
+              <City city={cityCurrent}></City>
+            </>
+          )}
         </div>
 
         {!isHide && (
           <>
-            <City city={cityCurrent}></City>
+            {/* <City city={cityCurrent}></City> */}
             <TodayForecast city={cityForecast}></TodayForecast>
             <AirCondition city={airConditions}></AirCondition>
             <WeekForecast city={weekForecast}></WeekForecast>

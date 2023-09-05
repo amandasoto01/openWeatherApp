@@ -1,5 +1,3 @@
-import { WeatherData } from "../WeatherData";
-
 export async function findByName(name: string) {
   try {
     const response = await fetch(
@@ -22,4 +20,18 @@ export async function getForecast(lat: number, lon: number) {
   );
   const json = await response.json();
   return json;
+}
+
+export function getImagePath(main: string): string {
+  const weather = new Map([
+    ["Clear", "sun"],
+    ["Clouds", "clouds"],
+    ["Thunderstorm", "thunder"],
+    ["Rain", "rain"],
+    ["Drizzle", "drizzle"],
+    ["Haze", "wind"],
+    ["Snow", "snow"],
+  ]);
+
+  return weather.get(main) || "";
 }

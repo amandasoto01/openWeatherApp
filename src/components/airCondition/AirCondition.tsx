@@ -6,12 +6,15 @@ import sun from "../../images/sun.png";
 
 export default function AirCondition(props: any) {
   return (
-    <div className="bg-gray-100 grid grid-cols-2 grid-rows-3 gap-y-3 justify-items-center mb-4 rounded-md">
-      <p className="flex text-gray-400 font-bold">Air Conditions</p>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded-full px-2 py-1">
+    <div className="col-start-2 row-stat-4 col-span-2 bg-gray-100 grid grid-cols-2 grid-rows-3 gap-y-3 justify-items-center m-4 rounded-md p-4">
+      <p className="flex text-gray-400 font-bold justify-self-start">
+        AIR CONDITIONS
+      </p>
+      <button className="buttonAir bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded-full justify-self-end">
         See more
       </button>
-      <div className="">
+
+      <div className="justify-self-start">
         <div className="flex gap-2">
           <img
             className="icon"
@@ -20,20 +23,20 @@ export default function AirCondition(props: any) {
           ></img>
           <p className="text-gray-400">Real Feel</p>
         </div>
-        <p className="text-3xl font-bold">
+        <p className="text-2xl font-bold">
           {Math.ceil(props.city.feels_like)}&deg;C
         </p>
       </div>
 
-      <div>
+      <div className="justify-self-start">
         <div className="flex gap-2">
           <img className="icon" src={wind} alt="wind"></img>
           <p className="text-gray-400">wind</p>
         </div>
-        <p className="text-3xl font-bold">{props.city.wind_speed} Km/h</p>
+        <p className="text-2xl font-bold">{props.city.wind_speed} Km/h</p>
       </div>
 
-      <div>
+      <div className="justify-self-start">
         <div className="flex gap-2">
           <img
             className="icon"
@@ -42,15 +45,15 @@ export default function AirCondition(props: any) {
           ></img>
           <p className="text-gray-400">Chance of Rain</p>
         </div>
-        <p className="text-3xl font-bold">{props.city.humidity}%</p>
+        <p className="text-2xl font-bold">{props.city.humidity}%</p>
       </div>
 
-      <div>
+      <div className="justify-self-start">
         <div className="flex gap-2">
           <img className="icon" src={sun} alt="sun for UV index"></img>
           <p className="text-gray-400">UV Index</p>
         </div>
-        <p className="text-3xl font-bold">{props.city.uvi}</p>
+        <p className="text-2xl font-bold">{props.city.uvi}</p>
       </div>
     </div>
   );
