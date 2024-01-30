@@ -8,7 +8,7 @@ import settings from "../../images/sidebar/settings.png";
 export default function Sidebar() {
   return (
     // col-start-0 row-span-3
-    <div className="col-start-1 row-start-1 row-span-3 bg-gray-100 mb-4 rounded-md p-5 mr-4 w-1/4 ml-5 justify-self-center">
+    <div className="col-start-1 row-start-1 row-span-3 bg-gray-100 mb-4 rounded-md p-5 mr-4 w-1/4 ml-5 justify-self-center center">
       <div className="flex flex-col justify-center items-center gap-10 mt-4">
         <div className="self-center mb-7">
           <button type="button">

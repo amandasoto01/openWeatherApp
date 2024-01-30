@@ -11,3 +11,8 @@ p {
 .size {
   align-self: center;
 }
+
+.center {
+  margin: auto;
+  width: 100%;
+}
