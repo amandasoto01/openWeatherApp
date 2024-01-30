@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/openWeatherApp/static/css/main.c3277650.css",
+    "main.js": "/openWeatherApp/static/js/main.664a171c.js",
+    "static/js/787.acef35f4.chunk.js": "/openWeatherApp/static/js/787.acef35f4.chunk.js",
+    "static/media/sunClouds.png": "/openWeatherApp/static/media/sunClouds.587da8625829577d62ab.png",
+    "static/media/drizzleAndClouds.png": "/openWeatherApp/static/media/drizzleAndClouds.b81f56ff11f4940ebf3d.png",
+    "static/media/sunCloud.png": "/openWeatherApp/static/media/sunCloud.163b4a8978e15d7c7e86.png",
+    "static/media/sunAndWind.png": "/openWeatherApp/static/media/sunAndWind.3c0988532b162432653c.png",
+    "static/media/snow.png": "/openWeatherApp/static/media/snow.ff091033f9ab87ed63b9.png",
+    "static/media/moonRain.png": "/openWeatherApp/static/media/moonRain.1661343719fc3d81fa6a.png",
+    "static/media/drops.png": "/openWeatherApp/static/media/drops.e76af398db4860ea6afd.png",
+    "static/media/rain.png": "/openWeatherApp/static/media/rain.af1bf5fd1cbc1d03e6f1.png",
+    "static/media/drizzle.png": "/openWeatherApp/static/media/drizzle.1d16c58f3952c05878f2.png",
+    "static/media/moonAndCloud.png": "/openWeatherApp/static/media/moonAndCloud.46f76b6b15442f4bb848.png",
+    "static/media/storm.png": "/openWeatherApp/static/media/storm.10da40bdff6a68844b95.png",
+    "static/media/moon.png": "/openWeatherApp/static/media/moon.666a24da4a58be95cb27.png",
+    "static/media/sun.png": "/openWeatherApp/static/media/sun.d828d2ede1f2efc7e123.png",
+    "static/media/clouds.png": "/openWeatherApp/static/media/clouds.03ece4198094c3ce4165.png",
+    "static/media/twoClouds.png": "/openWeatherApp/static/media/twoClouds.9b808e50f59c05c25d90.png",
+    "static/media/thunders.png": "/openWeatherApp/static/media/thunders.1ad00d018fdfcd7fd5f5.png",
+    "static/media/wind.png": "/openWeatherApp/static/media/wind.a51a0075b26e23bab926.png",
+    "static/media/temperature.png": "/openWeatherApp/static/media/temperature.245f5cf31dde9a85c68f.png",
+    "static/media/cloud.png": "/openWeatherApp/static/media/cloud.e65c7cbed648f6bfae03.png",
+    "static/media/drop.png": "/openWeatherApp/static/media/drop.4f87f8bb36f242f1a06a.png",
+    "static/media/weather-forecast.png": "/openWeatherApp/static/media/weather-forecast.0140e1ddf090b8fab71d.png",
+    "static/media/map.png": "/openWeatherApp/static/media/map.34589de5eb1aa78a5c68.png",
+    "static/media/umbrellapng.png": "/openWeatherApp/static/media/umbrellapng.2ae488f778830e394067.png",
+    "static/media/settings.png": "/openWeatherApp/static/media/settings.a0fcde07d4b512049540.png",
+    "static/media/thermometer.png": "/openWeatherApp/static/media/thermometer.84e7bdf6d797e6d70c29.png",
+    "index.html": "/openWeatherApp/index.html",
+    "main.c3277650.css.map": "/openWeatherApp/static/css/main.c3277650.css.map",
+    "main.664a171c.js.map": "/openWeatherApp/static/js/main.664a171c.js.map",
+    "787.acef35f4.chunk.js.map": "/openWeatherApp/static/js/787.acef35f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3277650.css",
+    "static/js/main.664a171c.js"
+  ]
+}
